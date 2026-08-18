@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import PageIntro from "@/components/PageIntro";
 import { about, certifications, education, experiences, site } from "@/lib/content";
@@ -22,6 +23,16 @@ export default function AboutPage() {
         </div>
 
         <aside className="space-y-6 border-t border-line pt-8 md:border-l md:border-t-0 md:pl-10 md:pt-0">
+          <div className="overflow-hidden border border-line">
+            <Image
+              src="/images/profil.png"
+              alt={site.name}
+              width={320}
+              height={400}
+              className="h-auto w-full object-cover"
+              priority
+            />
+          </div>
           <div>
             <p className="text-xs uppercase tracking-[0.2em] text-muted">Email</p>
             <a href={`mailto:${site.email}`} className="mt-2 block hover:text-lime">
@@ -32,6 +43,12 @@ export default function AboutPage() {
             <p className="text-xs uppercase tracking-[0.2em] text-muted">Téléphone</p>
             <a href={`tel:${site.phoneRaw}`} className="mt-2 block hover:text-lime">
               {site.phone}
+            </a>
+          </div>
+          <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-muted">WhatsApp</p>
+            <a href={site.whatsapp} target="_blank" rel="noopener noreferrer" className="mt-2 block hover:text-lime">
+              Discuter sur WhatsApp
             </a>
           </div>
           <div>

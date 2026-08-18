@@ -1,4 +1,4 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import PageIntro from "@/components/PageIntro";
 import { site, socials } from "@/lib/content";
 
@@ -16,7 +16,7 @@ export default function ContactPage() {
       />
 
       <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-24">
-        <div className="grid gap-10 md:grid-cols-3">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex gap-4">
             <Mail className="mt-1 text-lime" size={18} />
             <div>
@@ -36,6 +36,20 @@ export default function ContactPage() {
             </div>
           </div>
           <div className="flex gap-4">
+            <MessageCircle className="mt-1 text-lime" size={18} />
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-muted">WhatsApp</p>
+              <a
+                href={site.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 block hover:text-lime"
+              >
+                Discuter sur WhatsApp
+              </a>
+            </div>
+          </div>
+          <div className="flex gap-4">
             <MapPin className="mt-1 text-lime" size={18} />
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-muted">Localisation</p>
@@ -44,7 +58,17 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-wrap gap-4">
+        <a
+          href={site.whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-12 inline-flex items-center gap-2 bg-lime px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-ink transition hover:bg-paper"
+        >
+          <MessageCircle size={16} />
+          Me contacter sur WhatsApp
+        </a>
+
+        <div className="mt-10 flex flex-wrap gap-4">
           {socials.map((social) => (
             <a
               key={social.label}

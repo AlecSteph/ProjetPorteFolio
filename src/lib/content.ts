@@ -8,6 +8,7 @@ export const site = {
   email: "kamdemalec61@gmail.com",
   phone: "+33 6 35 09 98 87",
   phoneRaw: "+33635099887",
+  whatsapp: "https://wa.me/33635099887",
   availability: "Recherche d’alternance · Full Stack",
   tagline:
     "Étudiant ingénieur à l’ECE, je construis des applications web modernes — et je me forme à l’IA.",
@@ -97,9 +98,19 @@ export const education = [
 
 export const certifications = [
   {
-    year: "2026",
-    title: "Git et GitHub",
+    year: "Oct. 2025",
+    title: "Intelligence artificielle",
     place: "OpenClassrooms",
+  },
+  {
+    year: "Oct. 2024",
+    title: "Python",
+    place: "OpenClassrooms",
+  },
+  {
+    year: "2025",
+    title: "Certification développeur",
+    place: "CodinGame",
   },
 ];
 
@@ -182,9 +193,35 @@ export type Project = {
   tech: string[];
   featured: boolean;
   github?: string;
+  demo?: string;
 };
 
 export const projects: Project[] = [
+  {
+    slug: "todolistpro",
+    title: "TodoListPro",
+    category: "mobile" as ProjectCategory,
+    year: "2025",
+    status: "En ligne",
+    description:
+      "Application mobile de gestion de tâches : création, organisation et suivi des to-do lists. Disponible en téléchargement APK.",
+    tech: ["Mobile", "Application"],
+    featured: true,
+    github: "https://github.com/AlecSteph/TodoListPro",
+    demo: "https://lnkd.in/dwgsksSS",
+  },
+  {
+    slug: "gestion-taches-entreprise",
+    title: "Application Gestion Tâches Entreprise",
+    category: "web" as ProjectCategory,
+    year: "2025",
+    status: "Terminé",
+    description:
+      "Application pour planifier, suivre et organiser les tâches d’équipe de manière collaborative et centralisée.",
+    tech: ["Gestion", "Collaboratif"],
+    featured: false,
+    github: "https://github.com/AlecSteph/ApplicationGestionTacheEntreprise",
+  },
   {
     slug: "wo-systeme",
     title: "Site e-commerce WO-SYSTEME",
@@ -194,7 +231,7 @@ export const projects: Project[] = [
     description:
       "Conception et développement d’un site e-commerce pour WO-SYSTEME, de l’interface jusqu’aux fonctionnalités métier.",
     tech: ["Développement web", "E-commerce"],
-    featured: true,
+    featured: false,
   },
   {
     slug: "heligxiam-marketplace",

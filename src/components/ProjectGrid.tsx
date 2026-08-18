@@ -75,19 +75,32 @@ export default function ProjectGrid() {
               ))}
             </div>
 
-            <div className="mt-8 flex items-center justify-between gap-4">
+            <div className="mt-8 flex flex-wrap items-center justify-between gap-4">
               <p className="text-xs uppercase tracking-[0.2em] text-muted">{project.year}</p>
-              {project.github && (
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-sm text-paper hover:text-lime"
-                >
-                  GitHub
-                  <ArrowUpRight size={14} />
-                </a>
-              )}
+              <div className="flex flex-wrap gap-4">
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-sm text-lime hover:text-paper"
+                  >
+                    Voir en ligne
+                    <ArrowUpRight size={14} />
+                  </a>
+                )}
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-sm text-paper hover:text-lime"
+                  >
+                    GitHub
+                    <ArrowUpRight size={14} />
+                  </a>
+                )}
+              </div>
             </div>
           </article>
         ))}

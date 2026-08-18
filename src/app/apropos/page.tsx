@@ -25,14 +25,14 @@ export default function AboutPage() {
         </Reveal>
 
         <aside className="space-y-6 border-t border-line pt-8 md:border-l md:border-t-0 md:pl-10 md:pt-0">
-          <Reveal className="flex justify-center md:justify-start" delay={120}>
+          <Reveal className="flex justify-center" delay={120}>
             <div className="photo-frame overflow-hidden rounded-full border border-line">
               <Image
                 src="/images/profil.png"
                 alt={site.name}
                 width={160}
                 height={160}
-                className="h-36 w-36 object-cover object-top md:h-40 md:w-40"
+                className="h-36 w-36 scale-110 object-cover object-[50%_18%] md:h-40 md:w-40"
                 priority
               />
             </div>

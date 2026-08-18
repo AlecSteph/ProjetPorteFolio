@@ -29,18 +29,23 @@ export default function HomePage() {
                 Voir les projets
                 <ArrowUpRight size={16} />
               </Link>
-              <Link
-                href="/contact"
+              <a
+                href={site.cv}
+                download
                 className="inline-flex items-center gap-2 border border-line px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-paper transition hover:border-lime hover:text-lime"
               >
-                Me contacter
-              </Link>
+                Télécharger le CV
+              </a>
             </div>
           </div>
 
           <div className="mt-16 grid gap-px border border-line bg-line md:grid-cols-3">
-            {services.map((service) => (
-              <article key={service.index} className="bg-ink p-6 md:p-8">
+            {services.map((service, i) => (
+              <article
+                key={service.index}
+                className="lift-card bg-ink p-6 md:p-8"
+                style={{ animation: `reveal 0.7s ease both ${400 + i * 120}ms` }}
+              >
                 <p className="text-xs text-lime">{service.index}</p>
                 <h2 className="mt-4 font-display text-2xl font-semibold">{service.title}</h2>
                 <p className="mt-3 text-sm text-muted">{service.text}</p>

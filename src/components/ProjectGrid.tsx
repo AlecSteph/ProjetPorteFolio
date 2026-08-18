@@ -42,9 +42,10 @@ export default function ProjectGrid() {
         {list.map((project, i) => (
           <article
             key={project.slug}
-            className={`group border border-line bg-raised p-6 transition hover:border-lime md:p-8 ${
+            className={`group lift-card border border-line bg-raised p-6 md:p-8 ${
               project.featured && filter === "all" ? "md:col-span-2" : ""
             }`}
+            style={{ animation: `reveal 0.6s ease both ${i * 80}ms` }}
           >
             <div className="flex items-start justify-between gap-4">
               <p className="font-display text-5xl font-semibold text-line transition group-hover:text-lime/40">

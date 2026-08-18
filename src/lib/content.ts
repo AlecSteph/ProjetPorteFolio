@@ -9,6 +9,7 @@ export const site = {
   phone: "+33 6 35 09 98 87",
   phoneRaw: "+33635099887",
   whatsapp: "https://wa.me/33635099887",
+  cv: "/docs/CV-Stephane-Kamdem.pdf",
   availability: "Recherche d’alternance · Full Stack",
   tagline:
     "Étudiant ingénieur à l’ECE, je construis des applications web modernes — et je me forme à l’IA.",
@@ -101,16 +102,19 @@ export const certifications = [
     year: "Oct. 2025",
     title: "Intelligence artificielle",
     place: "OpenClassrooms",
+    file: "/docs/Certificat-IA-OpenClassrooms.pdf",
   },
   {
     year: "Oct. 2024",
     title: "Python",
     place: "OpenClassrooms",
+    file: "/docs/Certificat-Python-OpenClassrooms.pdf",
   },
   {
     year: "2025",
     title: "Certification développeur",
     place: "CodinGame",
+    file: "/docs/Certification-CodinGame.pdf",
   },
 ];
 
